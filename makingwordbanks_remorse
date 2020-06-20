@@ -1,0 +1,40 @@
+pip install nltk
+
+import nltk
+nltk.download('punkt')
+
+import nltk, re, pprint
+from nltk import word_tokenize
+from nltk.probability import FreqDist
+from nltk import FreqDist
+
+nltk.download('stopwords')
+
+import string
+
+raw = f=open('suicide-notes.txt','r')
+raw=f.read()
+
+s = raw
+s = s.translate(string.punctuation)
+
+tokens = nltk.word_tokenize(raw)
+text = nltk.Text(tokens)
+
+from nltk.corpus import stopwords
+
+fdisstop_words = set(stopwords.words('english'))  
+  
+filttxt = [w for w in text if not w in stop_words] 
+  
+filttxt = [] 
+  
+for w in text: 
+    if w not in stop_words: 
+        filttxt.append(w)
+        
+
+fdist = FreqDist(filttxt)
+
+sorted(w for w in set(filttxt) if len(w) > 4 and fdist[w] > 3)
+
