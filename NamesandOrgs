@@ -1,1 +1,8 @@
-
+*Goal: To compile a database that links names to active organizations of Flint MI. names. 
+*Goal(Tech): To create a table that has three headings
+            - Name 
+            - Organization they are affiliated with
+            - Role they played
+            -  [MAYBE] length of tenure
+ 
+ 
